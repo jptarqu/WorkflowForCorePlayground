@@ -1,0 +1,23 @@
+﻿<Activity x:Class="TestCases.Workflows.WF4Samples.SalaryCalculation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:mswe="clr-namespace:TestCases.Workflows.WF4Samples;assembly=TestCases.Workflows"
+          xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+          mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+  <Sequence>
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="desiredNumber" />
+    </Sequence.Variables>
+    <Assign >
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[desiredNumber]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[desiredNumber * 2]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine  Text="[desiredNumber.ToString()]" />
+
+    </Sequence>
+</Activity>
