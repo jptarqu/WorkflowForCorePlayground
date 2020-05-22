@@ -11,9 +11,13 @@ namespace CoreWfSample
     {
         static void Main(string[] args)
         {
-            var xamlString = File.ReadAllText("sampleXaml.xml");
+            Console.WriteLine("CoreWF run");
+               var xamlString = File.ReadAllText("sampleXaml.xml");
+            var startTime = DateTime.Now;
             var activity = ActivityXamlServices.Load(new StringReader(xamlString), new ActivityXamlServicesSettings { CompileExpressions = true });
             WorkflowInvoker.Invoke(activity, new Dictionary<string, Object>());
+            Console.WriteLine("Duration: " + (DateTime.Now.Subtract(startTime).TotalSeconds));
+            Console.ReadLine();
         }
     }
 }
