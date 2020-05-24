@@ -6,7 +6,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.3" />
-    <PackageReference Include="UiPath.Workflow" Version="1.0.0-20200505-01" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkflowFuncHelper\WorkflowFuncHelper.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
@@ -15,6 +17,9 @@
     <None Update="local.settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+    <None Update="System.Xaml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 </Project>

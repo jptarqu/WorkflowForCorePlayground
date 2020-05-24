@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="UiPath.Workflow" Version="1.0.0-20200505-01" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Xaml">
+      <HintPath>..\..\..\corewf\src\System.Xaml\bin\Debug\netstandard2.0\System.Xaml.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

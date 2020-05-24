@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AzureFuncSample
+namespace WorkflowFuncHelper
 {
     internal static class XamlDataProvider
     {

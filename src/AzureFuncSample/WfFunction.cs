@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using System.Activities.XamlIntegration;
 using System.Activities;
 using System.Collections.Generic;
+using WorkflowFuncHelper;
 
 namespace AzureFuncSample
 {
@@ -28,12 +29,9 @@ namespace AzureFuncSample
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
 
-            string xamlString = XamlDataProvider.GetXaml();
-            var activity = ActivityXamlServices.Load(new StringReader(xamlString), new ActivityXamlServicesSettings { CompileExpressions = true });
-            var resultDict =  WorkflowInvoker.Invoke(activity, new Dictionary<string, Object>());
-            var endingNumber = (int)resultDict["DesiredNumberResult"];
+            var endingNumber = Helper.RunWorkflow();
 
-            string responseMessage =  $"hi WF 3, {endingNumber}. This HTTP triggered function executed successfully.";
+            string responseMessage =  $"hi WF 4, {endingNumber}. This HTTP triggered function executed successfully.";
 
             return new OkObjectResult(responseMessage);
         }
