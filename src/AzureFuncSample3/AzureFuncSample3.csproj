@@ -1,20 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <!--<PropertyGroup>
+  <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
-    <UserSecretsId>3a3de05f-0984-4536-adaf-52fdb292e1b2</UserSecretsId>
+    <UserSecretsId>9373b705-f9e7-492b-a972-baa4366e9ef7</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.36" />
-  </ItemGroup>-->
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
-    <UserSecretsId>3a3de05f-0984-4536-adaf-52fdb292e1b2</UserSecretsId>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.7" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
+    <PackageReference Include="UiPath.Workflow" Version="1.0.0-20200505-01" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkflowFuncHelper\WorkflowFuncHelper.csproj" />
@@ -26,9 +18,6 @@
     <None Update="local.settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-    </None>
-    <None Update="System.Xaml.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 </Project>
